@@ -3,6 +3,7 @@ body {
     font-family: Georgia, serif;
     color: white;
     position: relative;
+    overflow: hidden;
 }
 
 body::before {
@@ -51,7 +52,7 @@ body::before {
 }
 
 .content h1, .content p {
-    color: #103f74; 
+    color: #000000; 
 }
 
 .headline {
@@ -97,7 +98,7 @@ body::before {
 }
 
 .search-box a {
-    color: #002144;
+    color: #000000;
     font-size: 24px;
     text-align: center;
 }
@@ -111,4 +112,10 @@ body::before {
     width: 40px;
     border-radius: 50%;
     object-fit: cover;
+}
+img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
 }
