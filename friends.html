@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Friends</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends</title>
+  <style>
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: url('bgimage-1.png') no-repeat center center/cover;
-        color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('bgimage-1.png') no-repeat center center/cover;
+      color: white;
     }
 
     .background {
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
     }
 
     .navigation {
-        display: flex;
-        gap: 20px;
+      display: flex;
+      gap: 20px;
     }
 
     .navigation div {
-        text-transform: uppercase;
-        font-size: 16px;
-        color: #ffffff;
-        cursor: pointer;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #ffffff;
+      cursor: pointer;
     }
 
     .navigation div:hover {
-        color: #00aaff;
+      color: #00aaff;
     }
 
     .content {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        padding: 100px 20px 20px; /* Adjust for header */
-        gap: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 100px 20px 20px; /* Adjust for header */
+      gap: 20px;
+      flex-wrap: nowrap; /* Keeps boxes in one row */
     }
 
     .box {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        border-radius: 8px;
-        width: 200px;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px; /* Increased box width */
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     }
 
     .box h3 {
-        color: #00aaff;
-        margin-bottom: 10px;
-        font-size: 18px;
+      color: #00aaff;
+      margin-bottom: 10px;
+      font-size: 18px;
     }
 
     .box p {
-        font-size: 14px;
-        color: #ffffff;
-        margin: 10px 0;
+      font-size: 14px;
+      color: #ffffff;
+      margin: 10px 0;
     }
 
     .box a {
-        color: #00aaff;
-        text-decoration: none;
-        font-size: 14px;
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 14px;
     }
 
     .box a:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
-</style>
+  </style>
 </head>
 <body>
-    <div class="background">
-        <div class="navigation">
-            <div>My Friends</div>
-            <div>Past Friends</div>
-            <div>Suggested Friends</div>
-        </div>
+  <div class="background">
+    <div class="navigation">
+      <div>My Friends</div>
+      <div>Past Friends</div>
+      <div>Suggested Friends</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="box">
+      <h3>My Friends</h3>
+      <p>Siddardha</p>
+      <p>Hemanth</p>
+      <p>NagaSheshu</p>
+      <a href="#">See more</a>
     </div>
 
-    <div class="content">
-        <div class="box">
-            <h3>My Friends</h3>
-            <p>John Doe</p>
-            <p>Jane Smith</p>
-            <p>Emily Davis</p>
-            <a href="#">See more</a>
-        </div>
-
-        <div class="box">
-            <h3>Past Friends</h3>
-            <p>Michael Brown</p>
-            <p>Sarah Johnson</p>
-            <p>Chris Lee</p>
-            <a href="#">See more</a>
-        </div>
-
-        <div class="box">
-            <h3>Suggested Friends</h3>
-            <p>Daniel Wilson</p>
-            <p>Emma Garcia</p>
-            <p>Sophia Martinez</p>
-            <a href="#">See more</a>
-        </div>
+    <div class="box">
+      <h3>Past Friends</h3>
+      <p>Karthik</p>
+      <p>Kalyan</p>
+      <p>Abhishek</p>
+      <a href="#">See more</a>
     </div>
+
+    <div class="box">
+      <h3>Suggested Friends</h3>
+      <p>Sahith</p>
+      <p>Bharat</p>
+      <p>Ravi</p>
+      <a href="#">See more</a>
+    </div>
+  </div>
 </body>
 </html>
