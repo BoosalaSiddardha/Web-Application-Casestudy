@@ -1,42 +1,186 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
-    <title>Travel Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Website</title>
+  <style>
+    /* Define CSS variables for consistency */
+    :root {
+      --primary-color: #00aaff;
+      --hover-color: #0088cc;
+      --text-color: #000;
+      --navbar-bg: rgba(0, 0, 0, 0.5);
+    }
 
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('bgimage-1.png') no-repeat center center/cover;
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    /* Header (navbar) styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px; 
+      background: var(--navbar-bg);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    header .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: 16px;
+      transition: color 0.3s, text-decoration 0.3s;
+      border-right: 1px solid rgba(255, 255, 255, 0.7);
+    }
+    nav a:last-child {
+      border-right: none;
+    }
+    .profile-link {
+      margin-right: 10px; /* Shifts the profile pic to the left */
+    }
+    .profile-link img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 3px solid #3498db;
+      object-fit: cover;
+      transition: border-color 0.3s;
+    }
+    .profile-link img:hover {
+      border-color: var(--primary-color);
+    }
+
+    /* Main content styling */
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    main h1,
+    main p {
+      color: var(--text-color);
+    }
+    .headline {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .subheadline {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    /* Search box styling */
+    .search-box {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 600px;
+      align-items: center;
+    }
+    /* Ensure both input and button share the same dimensions */
+    .search-box input,
+    .search-box button {
+      width: 100%;
+      height: 40px;
+      box-sizing: border-box;
+    }
+    .search-box input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-radius: 5px 5px 0 0;
+      margin-bottom: 0; /* Remove extra margin to align with the button */
+    }
+    .search-box button {
+      padding: 10px;
+      background: var(--primary-color);
+      border: none;
+      color: white;
+      border-radius: 0 0 5px 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .search-box button:hover {
+      background: var(--hover-color);
+    }
+    .search-box a {
+      color: var(--text-color);
+      font-size: 24px;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: text-decoration 0.3s;
+    }
+    .search-box a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="index.html">SHAREDESTINATIONS</a>
-        </div>
-        <div class="menu">
-            <a href="#how-it-works">Top Destinations</a>
-            <a href="friends.html">Friends</a>
-            <a href="#blog">Blogs</a>
-            <a href="#gzhr">Offers</a>
-            <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
-        </div>
-            <div class="img">
-                <a href="profile.html" height="40px" width="40px"><image src="user.png" alt="Profile picture"></a>
-            </div>
-                <!-- <select id="operator">
-                    <option value="+">Profile</option>
-                    <option value="-">Friends</option>
-                    <option value="*">Setting</option>
-                    <option value="/">LOGOUT</option>
-                </select> -->
+  <header>
+    <div class="logo">
+      <a href="index.html">SHAREDESTINATIONS</a>
     </div>
+    <nav>
+      <a href="#how-it-works">Top Destinations</a>
+      <a href="friends.html">Friends</a>
+      <a href="#blog">Blogs</a>
+      <a href="#gzhr">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div class="profile-link">
+      <a href="profile.html">
+        <img src="user.png" alt="User Profile Picture" />
+      </a>
+    </div>
+  </header>
 
-    <div class="content">
-        <h1 class="headline">THE ART OF DISCOVERY</h1>
-        <p class="subheadline">Explore the WORLD - Rediscover Yourself</p>
-        <div class="search-box">
-            <input type="text" placeholder="Where is your next Destiny?">
-            <button>GO!</button><br>
-            <a href="search.html" ><b>Apply filters</b></a>
-        </div>
+  <main>
+    <h1 class="headline">THE ART OF DISCOVERY</h1>
+    <p class="subheadline">Explore the WORLD - Rediscover Yourself</p>
+    <div class="search-box">
+      <input type="text" placeholder="Where is your next destiny?" />
+      <button>GO!</button>
+      <a href="search.html"><b>Apply filters</b></a>
     </div>
+  </main>
 </body>
 </html>
