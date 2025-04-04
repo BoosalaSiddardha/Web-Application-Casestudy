@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Destinations</title>
+  <style>
+    :root {
+      --primary-color: #00aaff;
+      --hover-color: #0088cc;
+      --text-color: #ffffff;
+      --navbar-bg: rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      background: url('bgimage-1.png') no-repeat center center/cover;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      background: var(--navbar-bg);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: 16px;
+      transition: color 0.3s;
+      border-right: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    .profile-link {
+      margin-right: 10px;
+    }
+
+    .profile-link img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      border: 3px solid #3498db;
+      object-fit: cover;
+      transition: border-color 0.3s;
+    }
+
+    .profile-link img:hover {
+      border-color: var(--primary-color);
+    }
+
+    /* Content Section */
+    .content {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 120px 20px 20px; /* Adjust for navbar */
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .box h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .box ol {
+      text-align: center;
+      padding-left: 0; /* Remove default padding */
+      list-style-position: inside; /* Align numbers with text */
+    }
+
+    .box ol li {
+      font-size: 14px;
+      padding: 5px 0;
+      color: white;
+      text-align: center; /* Ensure text is centered */
+    }
+
+    .box a {
+      display: block;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header>
+    <div class="logo">
+      <a href="index.html">SHAREDESTINATIONS</a>
+    </div>
+    <nav>
+      <a href="#topdestinations.html">Top Destinations</a>
+      <a href="friends.html">Friends</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#offers">Offers</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div class="profile-link">
+      <a href="profile.html">
+        <img src="user.png" alt="User Profile Picture" />
+      </a>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="box">
+      <h3>Past Month</h3>
+      <ol>
+        <li>New York</li>
+        <li>Paris</li>
+        <li>Dubai</li>
+        <li>Singapore</li>
+        <li>Los Angeles</li>
+        <li>Istanbul</li>
+        <li>Berlin</li>
+        <li>Hong Kong</li>
+        <li>Sydney</li>
+        <li>Rome</li>
+      </ol>
+      <a href="#">See more</a>
+    </div>
+
+    <div class="box">
+      <h3>Past Year</h3>
+      <ol>
+        <li>Tokyo</li>
+        <li>London</li>
+        <li>Bangkok</li>
+        <li>Barcelona</li>
+        <li>Amsterdam</li>
+        <li>Toronto</li>
+        <li>Moscow</li>
+        <li>Seoul</li>
+        <li>Mexico City</li>
+        <li>Lisbon</li>
+      </ol>
+      <a href="#">See more</a>
+    </div>
+
+    <div class="box">
+      <h3>All Time</h3>
+      <ol>
+        <li>Bali</li>
+        <li>Rome</li>
+        <li>Bangkok</li>
+        <li>Venice</li>
+        <li>Prague</li>
+        <li>Cape Town</li>
+        <li>Rio de Janeiro</li>
+        <li>Madrid</li>
+        <li>Beijing</li>
+        <li>Athens</li>
+      </ol>
+      <a href="#">See more</a>
+    </div>
+  </div>
+</body>
+</html>
